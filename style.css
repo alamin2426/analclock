@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background:#212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+.container{
+    position: relative;
+    
+
+}
+.Clock{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 10px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    /*  center e pointer er jonno*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    /* animation: alo; */
+    /* animation-duration: 0.9s;
+    transition: 0.9s; */
+
+}
+/* @keyframes alo {
+    100%   {background-color: red;}
+    100%  {background-color: yellow;}
+    100%  {background-color: blue;}
+   100% {background-color: green;}
+    
+  } */
+
+
+
+span{
+    position: absolute;
+    transform: rotate(calc(30deg* var(--i)));
+    inset: 18px;
+    text-align: center;
+    
+}
+.Clock b{
+    transform: rotate(calc(-30deg *var(--i)));
+    display: inline-block;
+    font-size: 22px;
+
+    
+}
+.Clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 2;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+
+}
